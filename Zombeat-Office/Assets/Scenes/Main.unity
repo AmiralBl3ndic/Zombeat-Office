@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &555298964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 555298966}
+  - component: {fileID: 555298965}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: LevelManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &555298965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555298964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d40817108fc84d88298552d18207a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelID: 1
+  musicClip: {fileID: 0}
+--- !u!4 &555298966
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555298964}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &690174549
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +163,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 690174550}
-  - component: {fileID: 690174552}
   - component: {fileID: 690174551}
+  - component: {fileID: 690174552}
   m_Layer: 0
   m_Name: leverPoint
   m_TagString: Untagged
@@ -176,10 +218,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 690174549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c96d1a5dcec551f489ab6c238ef3cd95, type: 3}
+  m_Script: {fileID: 11500000, guid: 16052d7fce86dc641a2dcad38dfcf445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enablePoint: 1
+  enablePoint: 0
 --- !u!1 &929441831
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +296,7 @@ Transform:
   - {fileID: 1572574616}
   - {fileID: 952287308}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952287307
 GameObject:
@@ -348,6 +390,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -363,7 +406,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572574615
 GameObject:
@@ -403,10 +446,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1572574615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78e5b3e10aa4b874cae4b7b7f5a0f6ac, type: 3}
+  m_Script: {fileID: 11500000, guid: c8bcaacd2cad92c47a74ce55114f7ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   exitAllowed: 0
+  levelManager: {fileID: 0}
 --- !u!61 &1572574618
 BoxCollider2D:
   m_ObjectHideFlags: 0

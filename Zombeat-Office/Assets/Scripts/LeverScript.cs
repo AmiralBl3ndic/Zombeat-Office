@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class leverTrigger : MonoBehaviour {
+public class LeverScript : MonoBehaviour
+{
 
     private GameObject exit;
 
@@ -11,21 +12,20 @@ public class leverTrigger : MonoBehaviour {
     public bool enablePoint = false;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         exit = GameObject.FindGameObjectWithTag("Finish");
     }
-	
-	// Update is called once per frame 
-	void Update () {
-		
-	}
+
+    // Update is called once per frame 
+    void Update() { }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!triggered)
         {
-            exit.GetComponent<checkAllowed>().allowExit();
+            exit.GetComponent<CheckAllowed>().allowExit();
             triggered = true;
         }
     }
