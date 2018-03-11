@@ -46,7 +46,7 @@ public class ExitScript : MonoBehaviour
         if (exitAllowed)
         {
             // Saving progression
-            levelManager.save();
+            levelManager.Save();
 
 
         }

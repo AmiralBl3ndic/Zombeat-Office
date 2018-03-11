@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class LeverScript : MonoBehaviour
 {
-
-    private GameObject exit;
-
     private bool triggered = false;
 
     public bool enablePoint = false;
 
 
     // Use this for initialization
-    void Start()
-    {
-        exit = GameObject.FindGameObjectWithTag("Finish");
-    }
+    void Start() { }
 
     // Update is called once per frame 
     void Update() { }
@@ -25,7 +19,7 @@ public class LeverScript : MonoBehaviour
     {
         if (!triggered)
         {
-            exit.GetComponent<CheckAllowed>().allowExit();
+            GameObject.FindGameObjectWithTag("Finish").GetComponent<ExitScript>().allowExit();
             triggered = true;
         }
     }
