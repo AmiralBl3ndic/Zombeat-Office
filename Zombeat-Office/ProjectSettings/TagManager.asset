@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
-<<<<<<< HEAD
   - Room
-=======
->>>>>>> 9a005605f90996b0a81dec854be4fb9d99b47a1e
+  - LevelManager
   layers:
   - Default
   - TransparentFX
@@ -18,7 +15,7 @@ TagManager:
   - UI
   - 
   - 
-  - Blocking Layer
+  - 
   - 
   - 
   - 
@@ -45,13 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: units
-    uniqueID: 3558892895
-    locked: 0
-  - name: items
-    uniqueID: 2653265831
-    locked: 0
-  - name: floor
-    uniqueID: 3127182247
     locked: 0
