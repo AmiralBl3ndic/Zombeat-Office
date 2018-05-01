@@ -11,6 +11,25 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		
 	}
+    private int combo = 0;
+    private int badCombo = 0;
+    void setStatus ()
+    {
+        if (hasMoved)
+        {
+            combo = 0;
+            badCombo++;
+        } else if (actionPeriod)
+        {
+            combo++;
+            badCombo = 0;
+        } else
+        {
+            badCombo++;
+        }
+
+        hasMoved = true;
+    }
 	
 	// Update is called once per frame
     /** @description Method used to get player actions and move the character on the screen
