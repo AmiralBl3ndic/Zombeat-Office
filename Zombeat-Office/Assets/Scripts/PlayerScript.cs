@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
-    
-    private bool canMove = false;
-
     [HideInInspector] public bool actionPeriod;
     [HideInInspector] public bool hasMoved;
     
@@ -17,16 +14,4 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 		
 	}
-
-
-    // To allow moves
-    public void allowMove()
-    {
-        canMove = true;
-    }
-
-    public void disallowMove()
-    {
-        canMove = false;
-    }
 }
