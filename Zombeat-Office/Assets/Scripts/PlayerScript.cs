@@ -41,19 +41,22 @@ public class PlayerScript : MonoBehaviour {
             transform.Translate(Vector3.right * spriteSize * Time.deltaTime);
         }
 
-
-        /** Toggle pause */
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Other player input actions
+        else
         {
-            Debug.Log("Toggling pause");
-            //TODO: do something
-        }
+            /** Toggle pause */
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("Toggling pause");
+                //TODO: do something
+            }
 
-        /** Main menu option */
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Going to the menu");
-            //TODO: do something
+            /** Main menu option */
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("Going to the menu");
+                //TODO: do something
+            }
         }
 	}
 }
