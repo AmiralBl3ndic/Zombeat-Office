@@ -173,9 +173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useMinMax: 1
   minimumToSpawn: 1
-  maximumToSpawn: 3
+  maximumToSpawn: 2
   usePreciseNumber: 0
-  leversToSpawn: 0
+  leversToSpawn: 1
   enabledLeversHolder: {fileID: 678460945}
   leverPoints:
   - {fileID: 690174549}
@@ -196,7 +196,7 @@ MonoBehaviour:
   minimumToSpawn: 1
   maximumToSpawn: 2
   usePreciseNumber: 0
-  enemiesToSpawn: 0
+  enemiesToSpawn: 2
   enabledEnemiesHolder: {fileID: 1053979016}
   enemies:
   - {fileID: 1276328212}
