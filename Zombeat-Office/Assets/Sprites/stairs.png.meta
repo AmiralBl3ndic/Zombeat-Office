@@ -1,53 +1,53 @@
 fileFormatVersion: 2
-guid: b04d09d4879e1d846ad0c9bd9ac7c4ee
+guid: a31c2305ee81c014eb40734a9afccd15
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Basic Sprites_0
-    21300002: Basic Sprites_1
-    21300004: Basic Sprites_2
-    21300006: Basic Sprites_3
-    21300008: Basic Sprites_4
-    21300010: Basic Sprites_5
-    21300012: Basic Sprites_6
-    21300014: Basic Sprites_7
-    21300016: Basic Sprites_8
-    21300018: Basic Sprites_9
-    21300020: Basic Sprites_10
-    21300022: Basic Sprites_11
-    21300024: Basic Sprites_12
-    21300026: Basic Sprites_13
-    21300028: Basic Sprites_14
-    21300030: Basic Sprites_15
-    21300032: Basic Sprites_16
-    21300034: Basic Sprites_17
-    21300036: Basic Sprites_18
-    21300038: Basic Sprites_19
-    21300040: Basic Sprites_20
-    21300042: Basic Sprites_21
-    21300044: Basic Sprites_22
-    21300046: Basic Sprites_23
-    21300048: Basic Sprites_24
-    21300050: Basic Sprites_25
-    21300052: Basic Sprites_26
-    21300054: Basic Sprites_27
-    21300056: Basic Sprites_28
-    21300058: Basic Sprites_29
-    21300060: Basic Sprites_30
-    21300062: Basic Sprites_31
-    21300064: Basic Sprites_32
-    21300066: Basic Sprites_33
-    21300068: Basic Sprites_34
-    21300070: Basic Sprites_35
-    21300072: Basic Sprites_36
-    21300074: Basic Sprites_37
-    21300076: Basic Sprites_38
-    21300078: Basic Sprites_39
-    21300080: Basic Sprites_40
-    21300082: Basic Sprites_41
-    21300084: Basic Sprites_42
-    21300086: Basic Sprites_43
-    21300088: Basic Sprites_44
-    21300090: Basic Sprites_45
+    21300000: stairs_0
+    21300002: stairs_1
+    21300004: stairs_2
+    21300006: stairs_3
+    21300008: stairs_4
+    21300010: stairs_5
+    21300012: stairs_6
+    21300014: stairs_7
+    21300016: stairs_8
+    21300018: stairs_9
+    21300020: stairs_10
+    21300022: stairs_11
+    21300024: stairs_12
+    21300026: stairs_13
+    21300028: stairs_14
+    21300030: stairs_15
+    21300032: stairs_16
+    21300034: stairs_17
+    21300036: stairs_18
+    21300038: stairs_19
+    21300040: stairs_20
+    21300042: stairs_21
+    21300044: stairs_22
+    21300046: stairs_23
+    21300048: stairs_24
+    21300050: stairs_25
+    21300052: stairs_26
+    21300054: stairs_27
+    21300056: stairs_28
+    21300058: stairs_29
+    21300060: stairs_30
+    21300062: stairs_31
+    21300064: stairs_32
+    21300066: stairs_33
+    21300068: stairs_34
+    21300070: stairs_35
+    21300072: stairs_36
+    21300074: stairs_37
+    21300076: stairs_38
+    21300078: stairs_39
+    21300080: stairs_40
+    21300082: stairs_41
+    21300084: stairs_42
+    21300086: stairs_43
+    21300088: stairs_44
+    21300090: stairs_45
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -150,13 +150,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic Sprites_0
+      name: stairs_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 32
+        x: 30
+        y: 444
+        width: 252
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1da228cf7e8cc6458ce6fa525074a37
+      spriteID: 41797c097ca5a4249b6b1a9c00d9aef3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_1
+      name: stairs_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 38
+        y: 402
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,19 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99f656e5c09b9474d827d1c65a01f160
+      spriteID: feaef0792467126469200b0e3f0a750d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_2
+      name: stairs_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 86
+        y: 385
         width: 32
-        height: 32
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,19 +204,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed8d15930e029cf4a82fce3261c9ff0d
+      spriteID: 685214749453b6f459e1fdbdf6962bf6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_3
+      name: stairs_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 134
+        y: 385
         width: 32
-        height: 32
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,19 +224,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7514b5c8e01c34429d795526af347b8
+      spriteID: befb46b1a6b777a4cbbe85b1630e33a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_4
+      name: stairs_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
-        width: 32
-        height: 32
+        x: 183
+        y: 385
+        width: 29
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,19 +244,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 724e24d0c007c9c44b911b64cae0fe95
+      spriteID: 360020b4e48e64448ac69f760b3130ba
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_5
+      name: stairs_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 192
-        width: 32
-        height: 32
+        x: 230
+        y: 385
+        width: 48
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,19 +264,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d119081cda28a4282e0d57ab8f80c2
+      spriteID: a99cf5b5af96afe4cb35f4b8ff46a7ee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_6
+      name: stairs_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 32
-        height: 32
+        x: 294
+        y: 385
+        width: 48
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,19 +284,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b928568b53a950f4f85a1943e67ec3d7
+      spriteID: 825439a9301909d4699907e6dcc6be00
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_7
+      name: stairs_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 192
+        x: 38
+        y: 370
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,19 +304,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f943698625876f49bed3eaaab5c1024
+      spriteID: 2edbfd55b83d19c4296bf6fba1f95de5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_8
+      name: stairs_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 38
+        y: 338
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,19 +324,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdeccec621e03a14abbd18d36c131770
+      spriteID: 77724aa617e2a444482456816bc59a58
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_9
+      name: stairs_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
+        x: 87
+        y: 353
+        width: 14
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,19 +344,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e892697897601ba4d8dbe3a846722016
+      spriteID: cc7d3abc4bc9ca140ae94a4f019b3363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_10
+      name: stairs_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
+        x: 104
+        y: 353
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -364,19 +364,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84fb86d9ebd3cd24a9159f2bc920de83
+      spriteID: 4f308f4f6749b90409d6198f9c45e258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_11
+      name: stairs_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
+        x: 119
+        y: 353
+        width: 14
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,19 +384,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f38671e458e21848afbd2b746436ebd
+      spriteID: 5c4c320f032ea6c47b76053c978c40b6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_12
+      name: stairs_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
+        x: 38
+        y: 306
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,19 +404,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6fc0bfeaa8d2f3448e90c4471296508
+      spriteID: e0d263a4260aab14e981378986048136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_13
+      name: stairs_13
       rect:
         serializedVersion: 2
-        x: 160
-        y: 160
-        width: 32
-        height: 32
+        x: 85
+        y: 313
+        width: 31
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -424,19 +424,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e79ba668940384428ca138ccb6faeb1
+      spriteID: 3c202655afd4b0d4588c96006c12e12b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_14
+      name: stairs_14
       rect:
         serializedVersion: 2
-        x: 192
-        y: 160
-        width: 32
-        height: 32
+        x: 133
+        y: 313
+        width: 16
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,19 +444,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f1cfae7dc54d045b87d4cb6c234620
+      spriteID: 82a91ed638154bb49bdfe90ac87ae2f3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_15
+      name: stairs_15
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
-        width: 32
-        height: 32
+        x: 167
+        y: 321
+        width: 14
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -464,19 +464,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc38595c74d22e1418bb3f20ed95f43b
+      spriteID: f9218a813f3fc04459255f9ff2ca5ff2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_16
+      name: stairs_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
+        x: 198
+        y: 321
+        width: 14
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,19 +484,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0951a3670f6ffa5499b8c7213d8293d7
+      spriteID: 46e1922b8460737439a914576758e99d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_17
+      name: stairs_17
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 230
+        y: 321
         width: 32
-        height: 32
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,19 +504,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35274a5f2bc55264b97c54ed051c8f45
+      spriteID: b0c5ef4aca34b5345bd8e8c87ac3c600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_18
+      name: stairs_18
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
+        x: 279
+        y: 321
+        width: 30
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -524,19 +524,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e05e3af7a443f2b44985059213144bcd
+      spriteID: 2ab80639f63acc14b953d0f30a2f8826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_19
+      name: stairs_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
-        width: 32
-        height: 32
+        x: 327
+        y: 321
+        width: 7
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -544,19 +544,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4c7ce57b58b77f4db3b931853715cfa
+      spriteID: 8fb43b8e6a53f9a418562460a9ff2a7e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_20
+      name: stairs_20
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 32
-        height: 32
+        x: 335
+        y: 321
+        width: 5
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,19 +564,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14313ca01b290544d85e98636148adb3
+      spriteID: e96b4c8ec1b1d1c40bd359d2adad6df9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_21
+      name: stairs_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 38
+        y: 273
         width: 32
-        height: 32
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,19 +584,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f9ad0c1503a84488706823318f57ce
+      spriteID: a8bbc939d612cd74daac74f9e6659b1f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_22
+      name: stairs_22
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 86
+        y: 273
         width: 32
-        height: 32
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,19 +604,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae968ab0405cd9d448ce6b60fa93661d
+      spriteID: c9ffc760b4114364995c5661d89e2741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_23
+      name: stairs_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
+        x: 134
+        y: 273
+        width: 16
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -624,19 +624,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e4e0e85ce6d77549932fb817d7efe16
+      spriteID: 5b6dca72c42696842a74ff3d1a2a8938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_24
+      name: stairs_24
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
+        x: 168
+        y: 273
+        width: 28
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -644,19 +644,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d904b7e0d08c8734ea6552c995fa1042
+      spriteID: 457dd1f9b1d379940af2c1986f4f4ea0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_25
+      name: stairs_25
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
+        x: 215
+        y: 273
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,19 +664,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713d27f20ef46c84fa75306d8217eb1b
+      spriteID: ebcf9e3057a14f84dbea714239338b03
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_26
+      name: stairs_26
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
+        x: 246
+        y: 273
+        width: 15
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -684,19 +684,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e24635daf1b606a449f0f9aac6555fce
+      spriteID: ffac03ddf6b087c48aa45d50d9aedf23
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_27
+      name: stairs_27
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
+        x: 279
+        y: 273
+        width: 30
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,19 +704,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c577e965e8c23f24f8d5a70ac04ef8ed
+      spriteID: 9658edb05e4bd7247b8c21d0574da239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_28
+      name: stairs_28
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
+        x: 327
+        y: 273
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,17 +724,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e19d2ad4a80aad34ebd7e253945ea68c
+      spriteID: 96e5b2b2f01d9364fa4cc6807aed0692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_29
+      name: stairs_29
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 38
+        y: 225
         width: 32
         height: 32
       alignment: 0
@@ -744,17 +744,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffbbffd240f031e4f8e53051d40b384b
+      spriteID: 9ad1b77d1babfae4faa7694111d16769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_30
+      name: stairs_30
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
+        x: 86
+        y: 225
         width: 32
         height: 32
       alignment: 0
@@ -764,17 +764,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93c34a5ad2e15c14c8d9fef0e78185fa
+      spriteID: c1cd3ae32ec5f2d43a077d57014a42d2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_31
+      name: stairs_31
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 134
+        y: 225
         width: 32
         height: 32
       alignment: 0
@@ -784,17 +784,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adcdec9326119244a8c7efcd2ef57ec5
+      spriteID: c6887f5148b4fa04683fada5c5d4f87c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_32
+      name: stairs_32
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 182
+        y: 225
         width: 32
         height: 32
       alignment: 0
@@ -804,19 +804,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4624b443d1e92c041b6019623adb40e7
+      spriteID: 45e2c0c981319164399b366dec27e5c8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_33
+      name: stairs_33
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 230
+        y: 222
+        width: 64
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -824,17 +824,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec8de37ad67a5944bb9595dd9838a597
+      spriteID: b6a406c68c4af9c46aab22c53797cd34
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_34
+      name: stairs_34
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 38
+        y: 178
         width: 32
         height: 32
       alignment: 0
@@ -844,17 +844,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b2b24869bad47d4f869a3c679f753e3
+      spriteID: e45a8f9a047a921479f8b581bbee3593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_35
+      name: stairs_35
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 86
+        y: 178
         width: 32
         height: 32
       alignment: 0
@@ -864,17 +864,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 859743305cc30254f8056d205054b409
+      spriteID: 55ddf27f1b4641e4db548fd88ded6ce3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_36
+      name: stairs_36
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 134
+        y: 178
         width: 32
         height: 32
       alignment: 0
@@ -884,17 +884,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77d0a95cf28730b418579ab0ba9f2cc5
+      spriteID: e794b06eef9878e4282bc088e6d9f978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_37
+      name: stairs_37
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
+        x: 182
+        y: 178
         width: 32
         height: 32
       alignment: 0
@@ -904,19 +904,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af411a72f3db151499194d6dc1f933b1
+      spriteID: 0902c7f70175c514a8fc95f71e264466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_38
+      name: stairs_38
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
+        x: 230
+        y: 174
+        width: 64
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,17 +924,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b93240fcacfa50c42b9859cea936720c
+      spriteID: 4dc8f24ace98981428e765c91ef0af9b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_39
+      name: stairs_39
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 38
+        y: 129
         width: 32
         height: 32
       alignment: 0
@@ -944,17 +944,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b5813ab207274b4691441cd6dd9494b
+      spriteID: 9117721d20270ce45b3e5241a28417c5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_40
+      name: stairs_40
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 86
+        y: 129
         width: 32
         height: 32
       alignment: 0
@@ -964,17 +964,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9af43dd2c9c54514b80395fa854db6ad
+      spriteID: c058dbe64d7cbb14c9662439405d8ddd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_41
+      name: stairs_41
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 134
+        y: 129
         width: 32
         height: 32
       alignment: 0
@@ -984,17 +984,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 901570f3b6ecb9f4db08d93a32f30203
+      spriteID: 243542b4e86cc464fb193c989f557216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_42
+      name: stairs_42
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
+        x: 182
+        y: 129
         width: 32
         height: 32
       alignment: 0
@@ -1004,19 +1004,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cb1307e4033c5643a8043b76e67258b
+      spriteID: a7d30593340bd914c9efdee467bcc00b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_43
+      name: stairs_43
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
+        x: 230
+        y: 126
+        width: 64
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,19 +1024,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9904068c721b8746a82d805a7a25bbb
+      spriteID: 5deae61c1d8c221479a3213322bbf214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_44
+      name: stairs_44
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
+        x: 38
+        y: 65
+        width: 160
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1044,19 +1044,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a3fb008c4c96bf45b5613aaa3f27781
+      spriteID: 98d464da181070647b72b95d4b1761e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Basic Sprites_45
+      name: stairs_45
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
+        x: 38
+        y: 17
+        width: 160
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1064,7 +1064,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ad13d3281fab1544b465c92f29e4045
+      spriteID: 854e026d1cfd9264a828e7e6a104cb01
       vertices: []
       indices: 
       edges: []
@@ -1072,7 +1072,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e162561311213134f90a62a0fdf586d1
+    spriteID: 4268651a6d75b504b8672602ebe725da
     vertices: []
     indices: 
     edges: []
