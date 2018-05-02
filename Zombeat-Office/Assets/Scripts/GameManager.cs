@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     private int level = 3;
 
     // Use this for initialization
-    void Awake ()
+    void Awake()
     {
         boardScripts = GetComponent<BoardManager>();
         InitGame();
