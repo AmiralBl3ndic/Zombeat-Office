@@ -10,6 +10,7 @@ TagManager:
   - Exit
   - Lever
   - Enemy
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - BlockingLayer
   - 
   - 
   - 
