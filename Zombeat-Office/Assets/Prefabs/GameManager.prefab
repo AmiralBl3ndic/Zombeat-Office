@@ -9,18 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1494933415483268}
+  m_RootGameObject: {fileID: 1465803719379496}
   m_IsPrefabParent: 1
---- !u!1 &1494933415483268
+--- !u!1 &1465803719379496
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4188621168518532}
-  - component: {fileID: 114982671262212450}
-  - component: {fileID: 114841762500557234}
+  - component: {fileID: 4360044372330874}
+  - component: {fileID: 114157790560328528}
+  - component: {fileID: 114687112449853278}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -28,25 +28,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4188621168518532
+--- !u!4 &4360044372330874
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494933415483268}
+  m_GameObject: {fileID: 1465803719379496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.837593, y: 1.9373227, z: -0.09966483}
+  m_LocalPosition: {x: 1.718415, y: 4.0298967, z: -0.015330827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114841762500557234
+--- !u!114 &114157790560328528
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494933415483268}
+  m_GameObject: {fileID: 1465803719379496}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9771925a4025d74a8ff53b8ccd0ac73, type: 3}
@@ -65,18 +65,26 @@ MonoBehaviour:
   - {fileID: 1536668983327758, guid: e62b04efa7d92ea4ab05921bbd0bf229, type: 2}
   wallTiles:
   - {fileID: 1553461737707406, guid: f74a8bacef34eb647a7c79e0efead401, type: 2}
-  foodTiles: []
+  - {fileID: 1546710286134002, guid: 8dd688a127a7d1e44aa675b7471ca276, type: 2}
+  - {fileID: 1877106105372184, guid: 4eaf6c02373532643bbcf3c7be4757b6, type: 2}
+  - {fileID: 1899528071215074, guid: 454c963bec9f9e04a94dec350de2248a, type: 2}
+  - {fileID: 1553461737707406, guid: d155052cb736ddb46994c7d770812646, type: 2}
+  - {fileID: 1553461737707406, guid: 49d784c7fd7624f46848dd1432d2881a, type: 2}
+  - {fileID: 1553461737707406, guid: 2da1c140495a25d49b2985ddee209601, type: 2}
+  - {fileID: 1553461737707406, guid: 11f2a63ef39ff3d42890168631e42216, type: 2}
+  foodTiles:
+  - {fileID: 1250475573887542, guid: 32b0f7b6cf3bed244bed3fbeb1f32430, type: 2}
   enemyTiles:
   - {fileID: 1996397287002620, guid: 35d7c01832808cf408fa0dc727ca20ac, type: 2}
   - {fileID: 1996397287002620, guid: 98fa173d30c4f6b4e9f93b65c8fddaae, type: 2}
   outerwallTiles:
   - {fileID: 1250475573887542, guid: 409b8b0efd5f3a249b7d6e92e2da2c1d, type: 2}
---- !u!114 &114982671262212450
+--- !u!114 &114687112449853278
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1494933415483268}
+  m_GameObject: {fileID: 1465803719379496}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1144ae649c97ab4ab5c5a45bc590b62, type: 3}
