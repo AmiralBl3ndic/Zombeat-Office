@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212668463092308468}
   - component: {fileID: 61759215074138026}
   m_Layer: 8
-  m_Name: OuterWall5
+  m_Name: OuterWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1250475573887542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.4001344, y: 1.4352077, z: -9.939583}
-  m_LocalScale: {x: 1.01, y: 1.01, z: 1.01}
+  m_LocalScale: {x: 1.03, y: 1.03, z: 1.03}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_SortingLayerID: 743831221
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300058, guid: b04d09d4879e1d846ad0c9bd9ac7c4ee, type: 3}
+  m_Sprite: {fileID: 21300058, guid: a31c2305ee81c014eb40734a9afccd15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
