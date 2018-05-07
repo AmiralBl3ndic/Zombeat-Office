@@ -76,7 +76,6 @@ MonoBehaviour:
   - {fileID: 1250475573887542, guid: 32b0f7b6cf3bed244bed3fbeb1f32430, type: 2}
   enemyTiles:
   - {fileID: 1996397287002620, guid: 35d7c01832808cf408fa0dc727ca20ac, type: 2}
-  - {fileID: 1996397287002620, guid: 98fa173d30c4f6b4e9f93b65c8fddaae, type: 2}
   outerwallTiles:
   - {fileID: 1250475573887542, guid: 409b8b0efd5f3a249b7d6e92e2da2c1d, type: 2}
 --- !u!114 &114687112449853278
