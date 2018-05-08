@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     public BoardManager boardScripts;
+    public int playerLifePoints = 10;
+    [HideInInspector] public bool playersTurn = true;
 
     private int level = 3;
 
@@ -24,6 +26,11 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         boardScripts.SetupScene(level);
+    }
+
+    public void GameOver()
+    {
+        enabled = false;
     }
 
     // Update is called once per frame
