@@ -55,8 +55,8 @@ MonoBehaviour:
   columns: 8
   rows: 8
   wallCount:
-    minimum: 5
-    maximum: 9
+    minimum: 1
+    maximum: 5
   foodCount:
     minimum: 1
     maximum: 5
@@ -89,4 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1144ae649c97ab4ab5c5a45bc590b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnDelay: 0.2
   boardScripts: {fileID: 0}
+  playerLifePoints: 10
+  playersTurn: 1

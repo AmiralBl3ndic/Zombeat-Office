@@ -121,7 +121,7 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
-  playerDamage: 30
+  playerDamage: 5
 --- !u!212 &212840979393303484
 SpriteRenderer:
   m_ObjectHideFlags: 1

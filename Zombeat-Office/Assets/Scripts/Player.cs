@@ -50,6 +50,7 @@ public class Player : MovingObject
     }
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
+        CheckIfGameOver();
         base.AttemptMove<T>(xDir, yDir);
 
         RaycastHit2D hit;
