@@ -7,10 +7,28 @@ public class PlayerScript : MonoBehaviour {
     [HideInInspector] public bool hasMoved;
 
     private const float spriteSize = 1f;
-    
-	void Start () {
-		
-	}
+
+    private int combo = 0;
+    private int badCombo = 0;
+
+
+    void setStatus ()
+    {
+        if (hasMoved)
+        {
+            combo = 0;
+            badCombo++;
+        } else if (actionPeriod)
+        {
+            combo++;
+            badCombo = 0;
+        } else
+        {
+            badCombo++;
+        }
+
+        hasMoved = true;
+    }
 	
 	// Update is called once per frame
     /** @description Method used to get player actions and move the character on the screen
@@ -23,21 +41,33 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W))
         {
             Debug.Log("Moving player upward");
+
+            setStatus();                
+
             transform.Translate(Vector3.up * spriteSize * Time.deltaTime);
         }
         else if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("Moving player to the left");
+
+            setStatus();
+
             transform.Translate(Vector3.left * spriteSize * Time.deltaTime);
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
             Debug.Log("Moving the player downwards");
+
+            setStatus();
+
             transform.Translate(Vector3.down * spriteSize * Time.deltaTime);
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
             Debug.Log("Moving the player to the right");
+
+            setStatus();
+
             transform.Translate(Vector3.right * spriteSize * Time.deltaTime);
         }
 
