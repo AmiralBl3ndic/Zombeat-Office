@@ -11,6 +11,8 @@ TagManager:
   - Lever
   - Enemy
   - enemy
+  - item
+  - InnerWall
   layers:
   - Default
   - TransparentFX

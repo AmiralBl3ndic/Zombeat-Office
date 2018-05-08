@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MovingObject {
+public class Player : MovingObject
+{
 
     public int wallDamage = 1;
-    public int pointsPerFood = 10;
+    public int pointsPerFood = 3;
 
     public float restartLevelDelay = 1f;
 
@@ -14,22 +15,22 @@ public class Player : MovingObject {
     private int life;
 
 
-	// Use this for initialization
-	protected override void Start ()
+    // Use this for initialization
+    protected override void Start()
     {
         animator = GetComponent<Animator>();
 
         life = GameManager.instance.playerLifePoints;
 
         base.Start();
-	}
+    }
 
     private void OnDisable()
     {
         GameManager.instance.playerLifePoints = life;
     }
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         if (!GameManager.instance.playersTurn) return;
 
@@ -42,12 +43,12 @@ public class Player : MovingObject {
         if (horizontal != 0)
             vertical = 0;
 
-        if ( horizontal != 0 || vertical != 0 )
+        if (horizontal != 0 || vertical != 0)
         {
             AttemptMove<Wall>(horizontal, vertical);
         }
     }
-    protected override void AttemptMove<T> (int xDir, int yDir)
+    protected override void AttemptMove<T>(int xDir, int yDir)
     {
         base.AttemptMove<T>(xDir, yDir);
 
@@ -72,11 +73,11 @@ public class Player : MovingObject {
         }
     }
 
-    protected override void OnCantMove <T> (T component)
+    protected override void OnCantMove<T>(T component)
     {
         Wall hitWall = component as Wall;
         hitWall.DamageWall(wallDamage);
-        animator.SetTrigger("playerChop");
+        animator.SetTrigger("PlayerChop");
     }
 
     private void Restart()
@@ -86,7 +87,7 @@ public class Player : MovingObject {
 
     public void LoseLife(int loss)
     {
-        animator.SetTrigger("playerHit");
+        animator.SetTrigger("PlayerHit");
         life -= loss;
         CheckIfGameOver();
     }

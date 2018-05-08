@@ -13,8 +13,9 @@ public class Enemy : MovingObject {
 	// Use this for initialization
 	protected override void Start ()
     {
+        GameManager.instance.AddEnemyToList(this);
         animator = GetComponent<Animator>();
-        target = GameObject.FindGameObjectsWithTag("Player").transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
 	}
 
@@ -36,6 +37,12 @@ public class Enemy : MovingObject {
         int xDir = 0;
         int yDir = 0;
 
+        Debug.Log("x :");
+        Debug.Log(target.position.x);
+        Debug.Log("y :");
+        Debug.Log(target.position.y);
+
+
         if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon)
             yDir = target.position.y > transform.position.y ? 1 : -1;
         else
@@ -48,8 +55,8 @@ public class Enemy : MovingObject {
     {
         Player hitPlayer = component as Player;
 
+        animator.SetTrigger("EnemyChop");
+
         hitPlayer.LoseLife(playerDamage);
-
-
     }
 }

@@ -83,7 +83,6 @@ public class BoardManager : MonoBehaviour
         for (int i = 0; i < objectCount; i++)
         {
             Vector3 randomPosition = RandomPosition();
-            Debug.Log(Random.Range(0, tileArray.Length));
             GameObject tileChoice = tileArray[Random.Range(0, tileArray.Length)];
             Instantiate(tileChoice, randomPosition, Quaternion.identity);
         }
