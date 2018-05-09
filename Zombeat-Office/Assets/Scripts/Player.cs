@@ -114,7 +114,7 @@ public class Player : MovingObject
             Invoke("Restart", restartLevelDelay);
             enabled = false;
         }
-        else if (other.tag == "item")
+        else if (other.tag == "Food")
         {
             life += pointsPerFood;
             lifeText.text = "+" + pointsPerFood + " HP: " + life;
