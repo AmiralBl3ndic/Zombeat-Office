@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MovingObject
 {
@@ -10,6 +11,7 @@ public class Player : MovingObject
     public int pointsPerFood = 3;
 
     public float restartLevelDelay = 1f;
+    public Text lifeText;
 
     private Animator animator;
     private int life;
@@ -29,6 +31,7 @@ public class Player : MovingObject
     {
         GameManager.instance.playerLifePoints = life;
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -43,6 +46,15 @@ public class Player : MovingObject
         if (horizontal != 0)
             vertical = 0;
 
+        if (horizontal == 1)
+            animator.SetTrigger("PlayerRight");
+
+        if (horizontal == -1)
+            animator.SetTrigger("PlayerLeft");
+
+        if (vertical == 1)
+            animator.SetTrigger("PlayerBack");
+
         if (horizontal != 0 || vertical != 0)
         {
             AttemptMove<Wall>(horizontal, vertical);
@@ -50,12 +62,10 @@ public class Player : MovingObject
     }
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
-        CheckIfGameOver();
+        lifeText.text = "HP: " + life;
         base.AttemptMove<T>(xDir, yDir);
 
         RaycastHit2D hit;
-
-        CheckIfGameOver();
 
         GameManager.instance.playersTurn = false;
     }
@@ -70,6 +80,7 @@ public class Player : MovingObject
         else if (other.tag == "item")
         {
             life += pointsPerFood;
+            lifeText.text = "+" + pointsPerFood + " HP: " + life;
             other.gameObject.SetActive(false);
         }
     }
@@ -90,6 +101,7 @@ public class Player : MovingObject
     {
         animator.SetTrigger("PlayerHit");
         life -= loss;
+        lifeText.text = "-" + loss + " HP: " + life;
         CheckIfGameOver();
     }
 

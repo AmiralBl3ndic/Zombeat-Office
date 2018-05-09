@@ -55,11 +55,11 @@ MonoBehaviour:
   columns: 8
   rows: 8
   wallCount:
-    minimum: 1
-    maximum: 5
+    minimum: 5
+    maximum: 9
   foodCount:
     minimum: 1
-    maximum: 5
+    maximum: 3
   exit: {fileID: 1633855193440580, guid: 9222e6fe132241e4e9fedf4b95ecf151, type: 2}
   floorTiles:
   - {fileID: 1536668983327758, guid: e62b04efa7d92ea4ab05921bbd0bf229, type: 2}
@@ -89,7 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1144ae649c97ab4ab5c5a45bc590b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnDelay: 0.2
+  levelStartDelay: 2
+  turnDelay: 0.15
   boardScripts: {fileID: 0}
   playerLifePoints: 10
   playersTurn: 1
