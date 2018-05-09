@@ -54,7 +54,7 @@ public class Enemy : MovingObject {
         if (xDir == -1)
             animator.SetTrigger("EnemyLeft");
 
-        if (xDir == 1)
+        if (yDir == 1)
             animator.SetTrigger("EnemyBack"); 
 
         AttemptMove<Player>(xDir, yDir);
