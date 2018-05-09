@@ -155,9 +155,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 990cc1456d7a0ad4f9af718e66e7a7c7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d297082a50d294242b479948e447d313, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -466,7 +466,7 @@ Prefab:
         type: 2}
       propertyPath: gameOverSound
       value: 
-      objectReference: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
+      objectReference: {fileID: 8300000, guid: ed6e5f54f801fbd48959afe07ed67aa8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04134424e7ec3bd48856dac065cf27c0, type: 2}
   m_IsPrefabParent: 0

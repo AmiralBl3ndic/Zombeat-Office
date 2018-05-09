@@ -45,7 +45,7 @@ public class Player : MovingObject
         int horizontal = 0;
         int vertical = 0;
 
-#if UNITY_STANDALONE || UNITY_WEBPLAYER
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
 
         horizontal = (int)Input.GetAxisRaw("Horizontal");
         vertical = (int)Input.GetAxisRaw("Vertical");
@@ -77,18 +77,21 @@ public class Player : MovingObject
         }
 
 #endif
-
         if (horizontal == 1)
             animator.SetTrigger("PlayerRight");
-
+        else
         if (horizontal == -1)
             animator.SetTrigger("PlayerLeft");
-
+        else
         if (vertical == 1)
             animator.SetTrigger("PlayerBack");
-
+        else
+        if (vertical == -1)
+            animator.SetTrigger("PlayerFront");
+        
         if (horizontal != 0 || vertical != 0)
             AttemptMove<Wall>(horizontal, vertical);
+
     }
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
