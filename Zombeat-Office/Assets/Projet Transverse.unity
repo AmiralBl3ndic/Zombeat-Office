@@ -442,6 +442,31 @@ Prefab:
       propertyPath: lifeText
       value: 
       objectReference: {fileID: 1216878205}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: moveSound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 892962212a4b74d1c9f578a3b6ea6439, type: 3}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: moveSound2
+      value: 
+      objectReference: {fileID: 8300000, guid: a826bc3d758db43d6ae9caf415b63d1d, type: 3}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: eatSound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cb61f83d60374c7389bb547431919e3, type: 3}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: eatSound2
+      value: 
+      objectReference: {fileID: 8300000, guid: 062161c1897a54088a5430f8c197e1b8, type: 3}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: gameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04134424e7ec3bd48856dac065cf27c0, type: 2}
   m_IsPrefabParent: 0

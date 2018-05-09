@@ -9,9 +9,13 @@ public class Player : MovingObject
 
     public int wallDamage = 1;
     public int pointsPerFood = 3;
-
     public float restartLevelDelay = 1f;
     public Text lifeText;
+    public AudioClip moveSound1;
+    public AudioClip moveSound2;
+    public AudioClip eatSound1;
+    public AudioClip eatSound2;
+    public AudioClip gameOverSound;
 
     private Animator animator;
     private int life;
@@ -66,6 +70,10 @@ public class Player : MovingObject
         base.AttemptMove<T>(xDir, yDir);
 
         RaycastHit2D hit;
+        if (Move(xDir,yDir, out hit))
+        {
+            SoundManager.instance.RandomizeSfx(moveSound1, moveSound2);
+        }
 
         GameManager.instance.playersTurn = false;
     }
@@ -81,6 +89,7 @@ public class Player : MovingObject
         {
             life += pointsPerFood;
             lifeText.text = "+" + pointsPerFood + " HP: " + life;
+            SoundManager.instance.RandomizeSfx(eatSound1, eatSound2);
             other.gameObject.SetActive(false);
         }
     }
@@ -108,6 +117,12 @@ public class Player : MovingObject
     private void CheckIfGameOver()
     {
         if (life <= 0)
+        {
+            SoundManager.instance.PlaySingle(gameOverSound);
+            SoundManager.instance.musicSource.Stop();
+
             GameManager.instance.GameOver();
+        }
+            
     }
 }
