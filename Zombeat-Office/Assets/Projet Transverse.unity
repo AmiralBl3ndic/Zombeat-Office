@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   efxSource: {fileID: 539031617}
   musicSource: {fileID: 539031616}
+  volume: 0
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &539031616
@@ -213,7 +214,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
