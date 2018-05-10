@@ -36,5 +36,4 @@ public class SettingsMenu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(index);
     }
-
 }
