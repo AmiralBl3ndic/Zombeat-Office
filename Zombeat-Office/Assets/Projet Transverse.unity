@@ -144,7 +144,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   efxSource: {fileID: 539031617}
   musicSource: {fileID: 539031616}
-  volume: 0
   lowPitchRange: 0.95
   highPitchRange: 1.05
 --- !u!82 &539031616
@@ -155,7 +154,8 @@ AudioSource:
   m_GameObject: {fileID: 539031614}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d90eef83adc29d14fafd4a0da253aaa5,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: d297082a50d294242b479948e447d313, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.6
@@ -235,7 +235,8 @@ AudioSource:
   m_GameObject: {fileID: 539031614}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f7a33404feabf104db4490d4d862a34c,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
