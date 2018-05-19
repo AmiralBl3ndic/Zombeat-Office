@@ -8,13 +8,13 @@ public class Loader : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake ()
-    {
+  {
         if (GameManager.instance == null)
             Instantiate(gameManager);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+	
 	}
 }

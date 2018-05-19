@@ -10,9 +10,19 @@ public class GameManager : MonoBehaviour
     public float levelStartDelay = 2f;
     public float turnDelay = .1f;
     public static GameManager instance = null;
-    public BoardManager boardScripts;
     public int playerLifePoints = 10;
     [HideInInspector] public bool playersTurn = true;
+    [HideInInspector] public BoardManager boardScripts;
+
+    // Rythm management section
+    public GameObject playerObject;
+    private Player player;
+    public RhythmEventProvider eventProvider;
+    private int halfPeriodFrames = 0;
+    private int frameCount = 0;
+    private bool countFrames = false;
+    private bool actionTime = false;
+
 
     private Text levelText;
     private GameObject levelImage;
@@ -28,6 +38,9 @@ public class GameManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+
+        player = playerObject.GetComponent<Player>();
+        eventProvider.Beat += initializer;
 
         DontDestroyOnLoad(gameObject);
         enemies = new List<Enemy>();
@@ -116,5 +129,73 @@ public class GameManager : MonoBehaviour
 
         playersTurn = true;
         enemiesMoving = false;
+    }
+
+
+    // To remove events
+    void onDestroy ()
+    {
+        eventProvider.SubBeat -= onSubBeat;
+    }
+
+    private void initializer (Beat beat)
+    {
+        eventProvider.FrameChanged += initFrameCounter;
+        eventProvider.SubBeat += initHalfQuarterBeat;
+    }
+
+
+    // This method is called only during the first quarter beat of the song
+    private void initHalfQuarterBeat(Beat beat, int beatIndex)
+    {
+        eventProvider.FrameChanged -= initFrameCounter;
+        eventProvider.SubBeat -= initHalfQuarterBeat;
+        eventProvider.Beat -= initializer;
+
+        eventProvider.SubBeat += onSubBeat;
+        eventProvider.FrameChanged += onFrameChanged;
+
+        halfPeriodFrames = halfPeriodFrames / 2;
+    }
+
+
+    private void initFrameCounter(int a, int b)
+    {
+        halfPeriodFrames += 1;
+    }
+
+
+    // Used for counting frames in the action period
+    private void onFrameChanged (int a, int b) // Do not know what a and b are, but seems to work (update: nothing better after checking official documentation)
+    {
+        if (countFrames)
+        {
+            frameCount += 1;
+
+            // Checking if the number of frames counted corresponds to the beginning of the action period
+            if (frameCount == halfPeriodFrames)
+            {
+                actionTime = true;
+                player.actionPeriod = true;
+                player.hasMoved = false;
+            }
+
+            // Checking if the number of frames counted corresponds to the end of the action period
+            if (frameCount == 2 * halfPeriodFrames)
+            {
+                actionTime = false;
+                player.actionPeriod = false;
+            }
+        }
+    }
+
+
+    private void onSubBeat(Beat beat, int beatIndex)
+    {
+        // Checking if we are in the 3rd (and last) quarter beat, if so starting to count beats
+        if (beatIndex == 3)
+        {
+            countFrames = true;
+        }
     }
 }

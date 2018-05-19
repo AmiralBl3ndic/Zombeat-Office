@@ -17,6 +17,11 @@ public class Player : MovingObject
     public AudioClip eatSound2;
     public AudioClip gameOverSound;
 
+    [HideInInspector]
+    public bool actionPeriod = false;
+    [HideInInspector]
+    public bool hasMoved = false;
+
     private Animator animator;
     private int life;
     private Vector2 touchOrigin = -Vector2.one;
@@ -88,7 +93,7 @@ public class Player : MovingObject
         else
         if (vertical == -1)
             animator.SetTrigger("PlayerFront");
-        
+
         if (horizontal != 0 || vertical != 0)
             AttemptMove<Wall>(horizontal, vertical);
 
@@ -152,6 +157,6 @@ public class Player : MovingObject
 
             GameManager.instance.GameOver();
         }
-            
+
     }
 }
