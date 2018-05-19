@@ -40,25 +40,22 @@ public class Enemy : MovingObject {
         int xDir = 0;
         int yDir = 0;
 
-        Debug.Log("x :");
-        Debug.Log(target.position.x);
-        Debug.Log("y :");
-        Debug.Log(target.position.y);
+        if( xDir == 0 && yDir == 0)
+        {
+            if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon)
+                yDir = target.position.y > transform.position.y ? 1 : -1;
+            else
+                xDir = target.position.x > transform.position.x ? 1 : -1;
+        }
 
-
-        if (Mathf.Abs(target.position.x - transform.position.x) < float.Epsilon)
-            yDir = target.position.y > transform.position.y ? 1 : -1;
-        else
-            xDir = target.position.x > transform.position.x ? 1 : -1;
-
-        if (xDir == 1)
+        /*if (xDir == 1)
             animator.SetTrigger("EnemyRight");
 
         if (xDir == -1)
             animator.SetTrigger("EnemyLeft");
 
         if (yDir == 1)
-            animator.SetTrigger("EnemyBack"); 
+            animator.SetTrigger("EnemyBack"); */
 
         AttemptMove<Player>(xDir, yDir);
     }
@@ -73,4 +70,31 @@ public class Enemy : MovingObject {
 
         hitPlayer.LoseLife(playerDamage);
     }
+
+    /*private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Collision detected");
+        int random = Random.Range(0, 3);
+
+        if (random == 0)
+        {
+            if (other.tag == "InnerWall")
+                MoveEnemy(1, 0);
+        }
+        else if (random == 1)
+        {
+            if (other.tag == "InnerWall")
+                MoveEnemy(0, 1);
+        }
+        else if (random == 2)
+        {
+            if (other.tag == "InnerWall")
+                MoveEnemy(-1, 0);
+        }
+        else if (random == 3)
+        {
+            if (other.tag == "InnerWall")
+                MoveEnemy(0, -1);
+        }
+    }*/
 }

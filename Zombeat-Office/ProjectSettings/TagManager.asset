@@ -13,6 +13,7 @@ TagManager:
   - enemy
   - item
   - InnerWall
+  - Food
   layers:
   - Default
   - TransparentFX

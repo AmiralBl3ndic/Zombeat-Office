@@ -19,6 +19,7 @@ public class Player : MovingObject
 
     private Animator animator;
     private int life;
+    private Vector2 touchOrigin = -Vector2.one;
 
 
     // Use this for initialization
@@ -44,25 +45,53 @@ public class Player : MovingObject
         int horizontal = 0;
         int vertical = 0;
 
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER
+
         horizontal = (int)Input.GetAxisRaw("Horizontal");
         vertical = (int)Input.GetAxisRaw("Vertical");
 
         if (horizontal != 0)
             vertical = 0;
+#else
 
+        if(Input.touchCount > 0)
+        {
+            Touch myTouch = Input.touches[0];
+
+            if(myTouch.phase == TouchPhase.Began)
+            {
+                touchOrigin = myTouch.position;
+            }
+            else if ( myTouch.phase == TouchPhase.Ended && touchOrigin.x >= 0 )
+            {
+                Vector2 touchEnd = myTouch.position;
+                float x = touchEnd.x - touchOrigin.x;
+                float y = touchEnd.y - touchOrigin.y;
+                touchOrigin.x = -1;
+
+                if (Mathf.Abs(x) > Mathf.Abs(y))
+                    horizontal = x > 0 ? 1 : -1;
+                else
+                    vertical = y > 0 ? 1 : -1;
+            }
+        }
+
+#endif
         if (horizontal == 1)
             animator.SetTrigger("PlayerRight");
-
+        else
         if (horizontal == -1)
             animator.SetTrigger("PlayerLeft");
-
+        else
         if (vertical == 1)
             animator.SetTrigger("PlayerBack");
-
+        else
+        if (vertical == -1)
+            animator.SetTrigger("PlayerFront");
+        
         if (horizontal != 0 || vertical != 0)
-        {
             AttemptMove<Wall>(horizontal, vertical);
-        }
+
     }
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
@@ -85,7 +114,7 @@ public class Player : MovingObject
             Invoke("Restart", restartLevelDelay);
             enabled = false;
         }
-        else if (other.tag == "item")
+        else if (other.tag == "Food")
         {
             life += pointsPerFood;
             lifeText.text = "+" + pointsPerFood + " HP: " + life;

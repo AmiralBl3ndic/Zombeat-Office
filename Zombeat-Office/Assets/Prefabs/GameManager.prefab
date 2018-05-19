@@ -74,6 +74,10 @@ MonoBehaviour:
   - {fileID: 1553461737707406, guid: 11f2a63ef39ff3d42890168631e42216, type: 2}
   foodTiles:
   - {fileID: 1250475573887542, guid: 32b0f7b6cf3bed244bed3fbeb1f32430, type: 2}
+  - {fileID: 1250475573887542, guid: 20b587d933a18a94fbdd0cd2ca0e74af, type: 2}
+  - {fileID: 1250475573887542, guid: b565d75d6566ac34a8c3a27a7ed83898, type: 2}
+  - {fileID: 1250475573887542, guid: f00444dc1403a444eaa56fb3518ea3b8, type: 2}
+  - {fileID: 1250475573887542, guid: e8954a7b5c2d1c543aafdde79a96fa60, type: 2}
   enemyTiles:
   - {fileID: 1996397287002620, guid: 35d7c01832808cf408fa0dc727ca20ac, type: 2}
   outerwallTiles:

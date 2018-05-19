@@ -154,10 +154,11 @@ AudioSource:
   m_GameObject: {fileID: 539031614}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 990cc1456d7a0ad4f9af718e66e7a7c7, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d90eef83adc29d14fafd4a0da253aaa5,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: d297082a50d294242b479948e447d313, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -213,7 +214,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -234,10 +235,11 @@ AudioSource:
   m_GameObject: {fileID: 539031614}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: f7a33404feabf104db4490d4d862a34c,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -293,7 +295,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -466,7 +468,7 @@ Prefab:
         type: 2}
       propertyPath: gameOverSound
       value: 
-      objectReference: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
+      objectReference: {fileID: 8300000, guid: ed6e5f54f801fbd48959afe07ed67aa8, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04134424e7ec3bd48856dac065cf27c0, type: 2}
   m_IsPrefabParent: 0
