@@ -231,7 +231,8 @@ MonoBehaviour:
   floorTiles:
   - {fileID: 1536668983327758, guid: e62b04efa7d92ea4ab05921bbd0bf229, type: 2}
   enemyTiles:
-  - {fileID: 1020402109642658, guid: bc820907db71f2047a19d96c8bcf72d5, type: 2}
-  - {fileID: 1871652688325358, guid: 9f5eabcbb8a416245940aa5ddf67dcf9, type: 2}
+  - {fileID: 1849247021762024, guid: bc820907db71f2047a19d96c8bcf72d5, type: 2}
+  - {fileID: 1827850991066666, guid: 9f5eabcbb8a416245940aa5ddf67dcf9, type: 2}
+  - {fileID: 1245383503795870, guid: 2c6e21d1fe36f1849a9167efdbe07535, type: 2}
   outerwallTiles:
   - {fileID: 1250475573887542, guid: 409b8b0efd5f3a249b7d6e92e2da2c1d, type: 2}
