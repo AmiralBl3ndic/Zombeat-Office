@@ -48,20 +48,14 @@ public class GameManager : MonoBehaviour
         InitGame();
     }
 
-    /*private void OnLevelWasLoaded(int index)
+    private void OnLevelWasLoaded(int index)
     {
         level++;
-        InitGame();
-    }*/
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        InitGame();
         Debug.Log("level : " + level + " successfully loaded");
-        level++;
+        InitGame();
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
@@ -70,6 +64,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        
+        InitGame();
+        Debug.Log("level : " + level + " successfully loaded");
+        Debug.Log(scene);
+        level++;
+    }*/
+
+
 
     void InitGame()
     {
