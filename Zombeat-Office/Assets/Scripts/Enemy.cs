@@ -5,12 +5,14 @@ using UnityEngine;
 public class Enemy : MovingObject {
 
     public int playerDamage;
+    public int hp = 5;
 
     private Animator animator;
     private Transform target;
     private bool skipMove;
     public AudioClip enemyAttack1;
     public AudioClip enemyAttack2;
+
 
 
 	// Use this for initialization
