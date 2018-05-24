@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     private bool enemiesMoving;
     private bool doingSetup;
 
+    private RhythmTool rTool = this.GetComponent<RhythmTool>();
+    private AudioClip audioClip = this.GetComponent<AudioClip>();
+
     // Use this for initialization
     void Awake()
     {
@@ -39,6 +42,10 @@ public class GameManager : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+
+
+        rTool.SongLoaded += onSongLoaded;
+        rTool.audioClip = audioClip;
 
         player = playerObject.GetComponent<Player>();
         eventProvider.Beat += initializer;
@@ -48,6 +55,10 @@ public class GameManager : MonoBehaviour
         boardScripts = GetComponent<BoardManager>();
         boardBossScripts = GetComponent<BoardManagerBoss>();
         InitGame();
+    }
+
+    private void OnSongLoaded() {
+      rTool.Play();
     }
 
     private void OnLevelWasLoaded(int index)
@@ -69,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        
+
         InitGame();
         Debug.Log("level : " + level + " successfully loaded");
         Debug.Log(scene);
