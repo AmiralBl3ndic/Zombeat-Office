@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public int playerLifePoints = 10;
     [HideInInspector] public bool playersTurn = true;
     [HideInInspector] public BoardManager boardScripts;
+    [HideInInspector] public BoardManagerBoss boardBossScripts;
 
     // Rythm management section
     public GameObject playerObject;
@@ -45,23 +46,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         enemies = new List<Enemy>();
         boardScripts = GetComponent<BoardManager>();
+        boardBossScripts = GetComponent<BoardManagerBoss>();
         InitGame();
     }
 
-    /*private void OnLevelWasLoaded(int index)
+    private void OnLevelWasLoaded(int index)
     {
         level++;
-        InitGame();
-    }*/
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        InitGame();
         Debug.Log("level : " + level + " successfully loaded");
-        level++;
+        InitGame();
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
@@ -70,6 +66,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
+
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        
+        InitGame();
+        Debug.Log("level : " + level + " successfully loaded");
+        Debug.Log(scene);
+        level++;
+    }*/
+
+
 
     void InitGame()
     {
@@ -82,7 +89,11 @@ public class GameManager : MonoBehaviour
         Invoke("HideLevelImage", levelStartDelay);
 
         enemies.Clear();
-        boardScripts.SetupScene(level);
+
+        if (level % 5== 0 )
+            boardBossScripts.SetupScene(level);
+        else
+            boardScripts.SetupScene(level);
     }
 
     private void HideLevelImage()
