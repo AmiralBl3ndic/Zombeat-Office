@@ -26,6 +26,8 @@ public class Player : MovingObject
     private int life;
     private Vector2 touchOrigin = -Vector2.one;
 
+    [HideInInspector] public int combo = 0;
+
 
     // Use this for initialization
     protected override void Start()
@@ -94,8 +96,24 @@ public class Player : MovingObject
         if (vertical == -1)
             animator.SetTrigger("PlayerFront");
 
-        if (horizontal != 0 || vertical != 0)
+        if (horizontal != 0 || vertical != 0) {
+          if (actionPeriod) {
+            if (hasMoved) {
+              Debug.Log("Player tried to move on rythm but has already moved for that beat");
+              combo = 0;
+            }
+            else {
+              Debug.Log("Player tried to move on rythm and has not already moved for that beat");
+              hasMoved = true;
+              combo++;
+            }
+          } else {
+            Debug.Log("Player tried to move but not in rythm");
+            hasMoved = true;
+            combo = 0;
+          }
             AttemptMove<Wall>(horizontal, vertical);
+        }
 
     }
     protected override void AttemptMove<T>(int xDir, int yDir)
