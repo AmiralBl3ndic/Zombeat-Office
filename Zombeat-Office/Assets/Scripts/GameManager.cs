@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour
     private bool enemiesMoving;
     private bool doingSetup;
 
-    private RhythmTool rTool = this.GetComponent<RhythmTool>();
-    private AudioClip audioClip = this.GetComponent<AudioClip>();
+    private RhythmTool rTool = GetComponent<RhythmTool>();
+    private AudioClip audioClip = GetComponent<AudioClip>();
 
     // Use this for initialization
     void Awake()
