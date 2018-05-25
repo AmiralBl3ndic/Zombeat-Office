@@ -498,7 +498,52 @@ Prefab:
         type: 2}
       propertyPath: gameOverSound
       value: 
-      objectReference: {fileID: 8300000, guid: ed6e5f54f801fbd48959afe07ed67aa8, type: 3}
+      objectReference: {fileID: 8300000, guid: e2beefeb2273f4efe992adf5b8d67c29, type: 3}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: pewpewlvl1
+      value: 
+      objectReference: {fileID: 1628745225934586, guid: fa5c6b1aad4844541a2dde0d88d61108,
+        type: 2}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: pewpewlvl2
+      value: 
+      objectReference: {fileID: 1637659045093008, guid: a7e8903d45083474b8f60c3d3209f9be,
+        type: 2}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: pewpewlvl3
+      value: 
+      objectReference: {fileID: 1616790126503606, guid: 770a749fb74529346abb08817aaf7b36,
+        type: 2}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: pewpewlvl4
+      value: 
+      objectReference: {fileID: 1498642950068518, guid: f65904dbeac11ad4e9113f2ebc1c65dc,
+        type: 2}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: boss1killed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: boss2killed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: boss3killed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: pewpew
+      value: 
+      objectReference: {fileID: 1637659045093008, guid: a7e8903d45083474b8f60c3d3209f9be,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04134424e7ec3bd48856dac065cf27c0, type: 2}
   m_IsPrefabParent: 0

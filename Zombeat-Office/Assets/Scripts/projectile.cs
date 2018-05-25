@@ -6,12 +6,6 @@ using UnityEngine.UI;
 
 public class projectile : MonoBehaviour
 {
-
-    public Enemy enemy;
-    public int damage;
-    public int wallDamage;
-
-
 	// Use this for initialization
 	void Start () {
     }

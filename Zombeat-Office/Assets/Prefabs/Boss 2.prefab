@@ -122,9 +122,10 @@ MonoBehaviour:
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
-  playerDamage: 20
+  playerDamage: 1
+  basehp: 30
   hp: 30
-  projectileDamage: 2
+  projectileDamage: 6
   enemyAttack1: {fileID: 8300000, guid: 4c2332bc8245b474dad63074059bb755, type: 3}
   enemyAttack2: {fileID: 8300000, guid: f6aaac83be9e0493493aace800b76619, type: 3}
 --- !u!212 &212243046951686520

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : MovingObject {
 
     public int playerDamage;
-    public int hp ;
+    public int basehp;
+    public int hp;
     public int projectileDamage;
 
     private Animator animator;
@@ -13,11 +14,11 @@ public class Enemy : MovingObject {
     private bool skipMove;
     public AudioClip enemyAttack1;
     public AudioClip enemyAttack2;
+    
 
 
-
-	// Use this for initialization
-	protected override void Start ()
+    // Use this for initialization
+    protected override void Start ()
     {
         GameManager.instance.AddEnemyToList(this);
         animator = GetComponent<Animator>();
@@ -27,7 +28,7 @@ public class Enemy : MovingObject {
 
     void Update()
     {
-    
+
     }
 
     protected override void AttemptMove<T>(int xDir, int yDir)
@@ -84,17 +85,67 @@ public class Enemy : MovingObject {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "projectile")
+        if(basehp == 5)
         {
-            Debug.Log("Touch !");
-            hp -= projectileDamage;
-            MoveEnemy();
+            if (other.tag == "projectile")
+                {
+                    hp -= projectileDamage;
+                    MoveEnemy();
+                }
+
+            if (hp <= 0)
+                gameObject.SetActive(false);
         }
 
-        if (hp <= 0)
-            gameObject.SetActive(false);
-            //Destroy(gameObject);
+        if (basehp == 15)
+        {
+            if (other.tag == "projectile")
+            {
+                hp -= projectileDamage;
+                MoveEnemy();
+            }
+
+            if (hp <= 0)
+            {
+                gameObject.SetActive(false);
+                projectileDamage += 4;
+            }
+        }
+
+        if (basehp == 30)
+        {
+            if (other.tag == "projectile")
+            {
+                hp -= projectileDamage;
+                MoveEnemy();
+            }
+
+            if (hp <= 0)
+            {
+                gameObject.SetActive(false);
+                projectileDamage += 4;
+            }
+        }
+
+
+        if (basehp == 60)
+        {
+            if (other.tag == "projectile")
+            {
+                hp -= projectileDamage;
+                MoveEnemy();
+            }
+
+            if (hp <= 0)
+            {
+                gameObject.SetActive(false);
+                projectileDamage += 10;
+            }
+        }
+
     }
+
+
 
     /*private void OnTriggerEnter2D(Collider2D other)
     {
