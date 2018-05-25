@@ -16,6 +16,7 @@ public class Player : MovingObject
     public AudioClip eatSound1;
     public AudioClip eatSound2;
     public AudioClip gameOverSound;
+    public GameObject pewpew;
 
     [HideInInspector]
     public bool actionPeriod = false;
@@ -114,6 +115,22 @@ public class Player : MovingObject
             combo = 0;
           }
             AttemptMove<Wall>(horizontal, vertical);
+        }
+
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            GameObject projectile = (GameObject)Instantiate(pewpew, transform.position, Quaternion.identity);
+
+            Debug.Log("pewpew");
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleBack"))
+                projectile.GetComponent<Rigidbody2D>().velocity = Vector2.up*10;
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleFront"))
+                projectile.GetComponent<Rigidbody2D>().velocity = Vector2.down*10;
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleRight"))
+                projectile.GetComponent<Rigidbody2D>().velocity = Vector2.right*10;
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleLeft"))
+                projectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * 10;
         }
 
     }

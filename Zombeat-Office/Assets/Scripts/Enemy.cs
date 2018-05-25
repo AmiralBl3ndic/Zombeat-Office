@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MovingObject {
 
     public int playerDamage;
-    public int hp = 5;
+    public int hp ;
 
     private Animator animator;
     private Transform target;
@@ -23,6 +23,12 @@ public class Enemy : MovingObject {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
 	}
+
+    void Update()
+    {
+        if (hp <= 0)
+            gameObject.SetActive(false);
+    }
 
     protected override void AttemptMove<T>(int xDir, int yDir)
     {

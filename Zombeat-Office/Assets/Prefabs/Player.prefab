@@ -106,6 +106,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114149629822487526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +125,16 @@ MonoBehaviour:
   wallDamage: 1
   pointsPerFood: 2
   restartLevelDelay: 1
+  lifeText: {fileID: 0}
+  moveSound1: {fileID: 0}
+  moveSound2: {fileID: 0}
+  eatSound1: {fileID: 0}
+  eatSound2: {fileID: 0}
+  gameOverSound: {fileID: 0}
+  pewpew: {fileID: 1461043694475018, guid: a7e8903d45083474b8f60c3d3209f9be, type: 2}
+  actionPeriod: 0
+  hasMoved: 0
+  combo: 0
 --- !u!212 &212282717765774420
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -137,6 +148,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
