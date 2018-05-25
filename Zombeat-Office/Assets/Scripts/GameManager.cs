@@ -32,19 +32,22 @@ public class GameManager : MonoBehaviour
     private bool enemiesMoving;
     private bool doingSetup;
 
-    private RhythmTool rTool = GetComponent<RhythmTool>();
-    private AudioClip audioClip = GetComponent<AudioClip>();
+    private RhythmTool rTool;
+    private AudioClip audioClip;
 
     // Use this for initialization
     void Awake()
     {
+        rTool = GetComponent<RhythmTool>();
+        audioClip = GetComponent<AudioClip>();
+        audioClip = GetComponent<AudioSource>().clip;
+
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
 
-
-        rTool.SongLoaded += onSongLoaded;
+        rTool.SongLoaded += OnSongLoaded;
         rTool.audioClip = audioClip;
 
         player = playerObject.GetComponent<Player>();
@@ -118,6 +121,7 @@ public class GameManager : MonoBehaviour
         levelText.text = "You survived " + (level+1) + "floors";
         levelImage.SetActive(true);
         enabled = false;
+        rTool.Stop();
     }
 
     // Update is called once per frame
@@ -178,6 +182,8 @@ public class GameManager : MonoBehaviour
         eventProvider.FrameChanged += onFrameChanged;
 
         halfPeriodFrames = halfPeriodFrames / 2;
+
+        Debug.Log("halfPeriodFrames = " + halfPeriodFrames);
     }
 
 
@@ -203,10 +209,12 @@ public class GameManager : MonoBehaviour
             }
 
             // Checking if the number of frames counted corresponds to the end of the action period
-            if (frameCount == 2 * halfPeriodFrames)
+            else if (frameCount == 2 * halfPeriodFrames)
             {
                 actionTime = false;
                 player.actionPeriod = false;
+                //player.hasMoved = false;
+                frameCount = 0;
             }
         }
     }

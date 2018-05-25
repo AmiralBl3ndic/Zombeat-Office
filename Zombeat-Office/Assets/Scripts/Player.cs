@@ -97,6 +97,7 @@ public class Player : MovingObject
             animator.SetTrigger("PlayerFront");
 
         if (horizontal != 0 || vertical != 0) {
+            Debug.Log("ActionPeriod: " + actionPeriod);
           if (actionPeriod) {
             if (hasMoved) {
               Debug.Log("Player tried to move on rythm but has already moved for that beat");
