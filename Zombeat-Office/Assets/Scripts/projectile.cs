@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class projectile : MonoBehaviour {
+public class projectile : MonoBehaviour
+{
 
     public Enemy enemy;
     public int damage;
+    public int wallDamage;
+
+
 	// Use this for initialization
 	void Start () {
     }
@@ -19,10 +23,6 @@ public class projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
-        {
-            enemy.hp -= damage;
-        }
         Destroy(gameObject);
     }
 }

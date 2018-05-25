@@ -121,8 +121,6 @@ public class Player : MovingObject
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject projectile = (GameObject)Instantiate(pewpew, transform.position, Quaternion.identity);
-
-            Debug.Log("pewpew");
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleBack"))
                 projectile.GetComponent<Rigidbody2D>().velocity = Vector2.up*10;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleFront"))
@@ -132,8 +130,8 @@ public class Player : MovingObject
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleLeft"))
                 projectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * 10;
         }
-
     }
+
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
         lifeText.text = "HP: " + life;

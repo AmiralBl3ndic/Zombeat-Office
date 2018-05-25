@@ -6,6 +6,7 @@ public class Enemy : MovingObject {
 
     public int playerDamage;
     public int hp ;
+    public int projectileDamage;
 
     private Animator animator;
     private Transform target;
@@ -26,8 +27,7 @@ public class Enemy : MovingObject {
 
     void Update()
     {
-        if (hp <= 0)
-            gameObject.SetActive(false);
+    
     }
 
     protected override void AttemptMove<T>(int xDir, int yDir)
@@ -47,6 +47,9 @@ public class Enemy : MovingObject {
     {
         int xDir = 0;
         int yDir = 0;
+
+        if (!gameObject.activeSelf)
+            return;
 
         if( xDir == 0 && yDir == 0)
         {
@@ -77,6 +80,20 @@ public class Enemy : MovingObject {
         SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
 
         hitPlayer.LoseLife(playerDamage);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "projectile")
+        {
+            Debug.Log("Touch !");
+            hp -= projectileDamage;
+            MoveEnemy();
+        }
+
+        if (hp <= 0)
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
     }
 
     /*private void OnTriggerEnter2D(Collider2D other)

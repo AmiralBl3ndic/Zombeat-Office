@@ -131,7 +131,7 @@ MonoBehaviour:
   eatSound1: {fileID: 0}
   eatSound2: {fileID: 0}
   gameOverSound: {fileID: 0}
-  pewpew: {fileID: 1461043694475018, guid: a7e8903d45083474b8f60c3d3209f9be, type: 2}
+  pewpew: {fileID: 1637659045093008, guid: a7e8903d45083474b8f60c3d3209f9be, type: 2}
   actionPeriod: 0
   hasMoved: 0
   combo: 0
