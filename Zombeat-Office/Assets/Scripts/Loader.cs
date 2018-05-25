@@ -8,7 +8,6 @@ public class Loader : MonoBehaviour {
 
     public GameObject gameManager;
 
-    private int counter=0;
 
 	// Use this for initialization
 	void Awake ()

@@ -83,17 +83,17 @@ public class BoardManagerBoss : MonoBehaviour
         {
             Vector3 randomPosition = RandomPosition();
             
-            if(level == 0)
+            if(level == 5)
             {
                 GameObject tileChoice = tileArray[0];
                 Instantiate(tileChoice, randomPosition, Quaternion.identity);
             }
-            if (level == 5)
+            if (level == 10)
             {
                 GameObject tileChoice = tileArray[1];
                 Instantiate(tileChoice, randomPosition, Quaternion.identity);
             }
-            if (level == 10)
+            if (level == 15)
             {
                 GameObject tileChoice = tileArray[2];
                 Instantiate(tileChoice, randomPosition, Quaternion.identity);
