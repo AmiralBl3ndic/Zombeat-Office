@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public float levelStartDelay = 2f;
-    public float turnDelay = .1f;
+    public float turnDelay = .01f;
     public static GameManager instance = null;
     public int playerLifePoints = 10;
     [HideInInspector] public bool playersTurn = true;
@@ -19,10 +19,11 @@ public class GameManager : MonoBehaviour
     public GameObject playerObject;
     private Player player;
     public RhythmEventProvider eventProvider;
-    private int halfPeriodFrames = 0;
-    private int frameCount = 0;
-    private bool countFrames = false;
-    private bool actionTime = false;
+    private RhythmTool rTool;
+    private AudioClip audioClip;
+    private int beatIndex = 0;
+    private int counter = 0;
+    private bool wtfToggle = false;
 
 
     private Text levelText;
@@ -32,26 +33,23 @@ public class GameManager : MonoBehaviour
     private bool enemiesMoving;
     private bool doingSetup;
 
-    private RhythmTool rTool;
-    private AudioClip audioClip;
 
     // Use this for initialization
     void Awake()
     {
-        rTool = GetComponent<RhythmTool>();
-        audioClip = GetComponent<AudioClip>();
-        audioClip = GetComponent<AudioSource>().clip;
-
         if (instance == null)
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
 
-        rTool.SongLoaded += OnSongLoaded;
+        // Getting RhythmTool needed components
+        rTool = GetComponent<RhythmTool>();
+        audioClip = GetComponent<AudioSource>().clip;
         rTool.audioClip = audioClip;
+        rTool.SongLoaded += OnSongLoaded;
+        eventProvider.SubBeat += onSubBeat;
 
         player = playerObject.GetComponent<Player>();
-        eventProvider.Beat += initializer;
 
         DontDestroyOnLoad(gameObject);
         enemies = new List<Enemy>();
@@ -59,10 +57,7 @@ public class GameManager : MonoBehaviour
         boardBossScripts = GetComponent<BoardManagerBoss>();
         InitGame();
     }
-
-    private void OnSongLoaded() {
-      rTool.Play();
-    }
+   
 
     private void OnLevelWasLoaded(int index)
     {
@@ -70,6 +65,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("level : " + level + " successfully loaded");
         InitGame();
     }
+
 
     /*void OnEnable()
     {
@@ -91,7 +87,6 @@ public class GameManager : MonoBehaviour
     }*/
 
 
-
     void InitGame()
     {
         doingSetup = true;
@@ -110,11 +105,13 @@ public class GameManager : MonoBehaviour
             boardScripts.SetupScene(level);
     }
 
+
     private void HideLevelImage()
     {
         levelImage.SetActive(false);
         doingSetup = false;
     }
+
 
     public void GameOver()
     {
@@ -123,6 +120,7 @@ public class GameManager : MonoBehaviour
         enabled = false;
         rTool.Stop();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -133,10 +131,12 @@ public class GameManager : MonoBehaviour
         StartCoroutine(MoveEnemies());
     }
 
+
     public void AddEnemyToList(Enemy script)
     {
         enemies.Add(script);
     }
+
 
     IEnumerator MoveEnemies()
     {
@@ -164,68 +164,38 @@ public class GameManager : MonoBehaviour
         eventProvider.SubBeat -= onSubBeat;
     }
 
-    private void initializer (Beat beat)
+
+    private void OnSongLoaded()
     {
-        eventProvider.FrameChanged += initFrameCounter;
-        eventProvider.SubBeat += initHalfQuarterBeat;
+        rTool.Play();
     }
 
 
-    // This method is called only during the first quarter beat of the song
-    private void initHalfQuarterBeat(Beat beat, int beatIndex)
+    private void onSubBeat(Beat beat, int index)
     {
-        eventProvider.FrameChanged -= initFrameCounter;
-        eventProvider.SubBeat -= initHalfQuarterBeat;
-        eventProvider.Beat -= initializer;
-
-        eventProvider.SubBeat += onSubBeat;
-        eventProvider.FrameChanged += onFrameChanged;
-
-        halfPeriodFrames = halfPeriodFrames / 2;
-
-        Debug.Log("halfPeriodFrames = " + halfPeriodFrames);
-    }
-
-
-    private void initFrameCounter(int a, int b)
-    {
-        halfPeriodFrames += 1;
-    }
-
-
-    // Used for counting frames in the action period
-    private void onFrameChanged (int a, int b) // Do not know what a and b are, but seems to work (update: nothing better after checking official documentation)
-    {
-        if (countFrames)
+        /*if (index == 1)
         {
-            frameCount += 1;
-
-            // Checking if the number of frames counted corresponds to the beginning of the action period
-            if (frameCount == halfPeriodFrames)
-            {
-                actionTime = true;
-                player.actionPeriod = true;
-                player.hasMoved = false;
-            }
-
-            // Checking if the number of frames counted corresponds to the end of the action period
-            else if (frameCount == 2 * halfPeriodFrames)
-            {
-                actionTime = false;
-                player.actionPeriod = false;
-                //player.hasMoved = false;
-                frameCount = 0;
-            }
+            player.actionPeriod = false;
+            player.hasMoved = false;
+            //Debug.Log("Window closed");
         }
-    }
 
-
-    private void onSubBeat(Beat beat, int beatIndex)
-    {
-        // Checking if we are in the 3rd (and last) quarter beat, if so starting to count beats
-        if (beatIndex == 3)
+        if (index == 3)
         {
-            countFrames = true;
+            player.actionPeriod = true;
+            player.hasMoved = false;
+            //Debug.Log("Window opened");
+        }*/
+
+        if (index == 1 || index == 3)
+        {
+            player.actionPeriod = !player.actionPeriod;
+            player.hasMoved = false;
         }
+
+        /*if (player.actionPeriod == false)
+            Debug.Log("Not inside action period");
+        else
+            Debug.Log("Inside action period");*/
     }
 }
