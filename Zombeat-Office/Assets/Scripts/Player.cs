@@ -16,6 +16,7 @@ public class Player : MovingObject
     public AudioClip eatSound1;
     public AudioClip eatSound2;
     public AudioClip gameOverSound;
+    public AudioClip fireBall;
     public GameObject pewpew;
 
     // Rythm section
@@ -116,11 +117,13 @@ public class Player : MovingObject
                 combo = 0;
             }
             AttemptMove<Wall>(horizontal, vertical);
+            Debug.Log(combo);
         }
 
         if (Input.GetButtonDown("Fire1"))
         {
             GameObject projectile = (GameObject)Instantiate(pewpew, transform.position, Quaternion.identity);
+            SoundManager.instance.RandomizeSfx(fireBall, fireBall);
 
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("PlayerIdleBack"))
                 projectile.GetComponent<Rigidbody2D>().velocity = Vector2.up * 10;

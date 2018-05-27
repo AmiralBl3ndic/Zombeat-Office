@@ -514,6 +514,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1637659045093008, guid: a7e8903d45083474b8f60c3d3209f9be,
         type: 2}
+    - target: {fileID: 114149629822487526, guid: 04134424e7ec3bd48856dac065cf27c0,
+        type: 2}
+      propertyPath: fireBall
+      value: 
+      objectReference: {fileID: 8300000, guid: a1a1993a20e223e4cb37edb092233821, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04134424e7ec3bd48856dac065cf27c0, type: 2}
   m_IsPrefabParent: 0
