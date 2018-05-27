@@ -140,6 +140,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator MoveEnemies()
     {
+
         enemiesMoving = true;
         yield return new WaitForSeconds(turnDelay);
         if ( enemies.Count == 0)
@@ -149,6 +150,12 @@ public class GameManager : MonoBehaviour
 
         for (int i = 0; i < enemies.Count; i++)
         {
+            if (enemies[i] == null)
+            {
+                yield return new WaitForSeconds(enemies[i].moveTime);
+                continue;
+            }
+
             enemies[i].MoveEnemy();
             yield return new WaitForSeconds(enemies[i].moveTime);
         }

@@ -106,7 +106,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114756019130976406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -128,6 +127,7 @@ MonoBehaviour:
   projectileDamage: 20
   enemyAttack1: {fileID: 8300000, guid: 0db8cac2749584a009540aa5671ee80d, type: 3}
   enemyAttack2: {fileID: 8300000, guid: 114514a3b3697484ebaa08f7fbf842d3, type: 3}
+  food: {fileID: 1250475573887542, guid: b565d75d6566ac34a8c3a27a7ed83898, type: 2}
 --- !u!212 &212840979393303484
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -141,7 +141,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:

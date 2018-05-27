@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy : MovingObject {
 
@@ -14,16 +15,20 @@ public class Enemy : MovingObject {
     private bool skipMove;
     public AudioClip enemyAttack1;
     public AudioClip enemyAttack2;
-    
+    public GameObject food;
 
+    private Vector2 myPosition;
+    private List<Vector3> gridPositions = new List<Vector3>();
 
     // Use this for initialization
     protected override void Start ()
     {
+        InitialiseList();
         GameManager.instance.AddEnemyToList(this);
         animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         base.Start();
+
 	}
 
     void Update()
@@ -49,7 +54,9 @@ public class Enemy : MovingObject {
         int xDir = 0;
         int yDir = 0;
 
-        if (!gameObject.activeSelf)
+        //if (gameObject.activeSelf)
+        //  return;
+        if (gameObject == null)
             return;
 
         if( xDir == 0 && yDir == 0)
@@ -83,6 +90,34 @@ public class Enemy : MovingObject {
         hitPlayer.LoseLife(playerDamage);
     }
 
+    void InitialiseList()
+    {
+        gridPositions.Clear();
+
+        for (int x = 2; x < 5; x++)
+        {
+            for (int y = 2; y < 5; y++)
+            {
+                gridPositions.Add(new Vector3(x, y, 0f));
+            }
+        }
+    }
+
+    Vector3 RandomPosition()
+    {
+        int randomIndex = Random.Range(0, gridPositions.Count);
+        Vector3 randomPosition = gridPositions[randomIndex];
+        gridPositions.RemoveAt(randomIndex);
+
+        return randomPosition;
+    }
+
+
+    float random()
+    {
+        return Random.Range(0, 100);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(basehp == 5)
@@ -94,7 +129,16 @@ public class Enemy : MovingObject {
                 }
 
             if (hp <= 0)
-                gameObject.SetActive(false);
+            {
+                //gameObject.SetActive(false);
+                
+                if (random() <= 80)
+                {
+                    myPosition = transform.position;
+                    Instantiate(food, myPosition, Quaternion.identity);
+                }
+                Destroy(gameObject);  
+            }
         }
 
         if (basehp == 15)
@@ -108,7 +152,11 @@ public class Enemy : MovingObject {
             if (hp <= 0)
             {
                 gameObject.SetActive(false);
-                projectileDamage += 4;
+                for (int i = 0; i < 5; i++)
+                {
+                    Vector3 randomPosition = RandomPosition();
+                    Instantiate(food, randomPosition, Quaternion.identity);
+                }
             }
         }
 
@@ -123,7 +171,11 @@ public class Enemy : MovingObject {
             if (hp <= 0)
             {
                 gameObject.SetActive(false);
-                projectileDamage += 4;
+                for (int i = 0; i < 10; i++)
+                {
+                    Vector3 randomPosition = RandomPosition();
+                    Instantiate(food, randomPosition, Quaternion.identity);
+                }
             }
         }
 
@@ -139,7 +191,11 @@ public class Enemy : MovingObject {
             if (hp <= 0)
             {
                 gameObject.SetActive(false);
-                projectileDamage += 10;
+                for (int i = 0; i < 15; i++)
+                {
+                    Vector3 randomPosition = RandomPosition();
+                    Instantiate(food, randomPosition, Quaternion.identity);
+                }
             }
         }
 

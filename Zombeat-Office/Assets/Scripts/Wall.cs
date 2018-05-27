@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Wall : MonoBehaviour {
 
@@ -9,7 +10,11 @@ public class Wall : MonoBehaviour {
     public int projectileWallDamage;
     public AudioClip chopSound1;
     public AudioClip chopSound2;
+    public GameObject food;
+    public BoardManager boardManagerScript;
+    
 
+    private Vector2 myPosition;
 
     private SpriteRenderer spriteRenderer;
 
@@ -17,8 +22,13 @@ public class Wall : MonoBehaviour {
 	void Awake ()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        myPosition = transform.position;
 	}
+
+    float random()
+    {
+        return Random.Range(0, 100);
+    }
 	
     public void DamageWall (int loss)
     {
@@ -26,8 +36,15 @@ public class Wall : MonoBehaviour {
         //spriteRenderer.sprite = dmgSprite;
         hp -= loss;
         if (hp <= 0)
+        {
             gameObject.SetActive(false);
+            
+            if(random() <= 40)
+                Instantiate(food, myPosition, Quaternion.identity);
+        }
+            
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -36,6 +53,11 @@ public class Wall : MonoBehaviour {
             hp -= projectileWallDamage;
         }
         if (hp <= 0)
+        {
             gameObject.SetActive(false);
+
+            if (random() <= 10)
+                Instantiate(food, myPosition, Quaternion.identity);
+        }
     }
 }
