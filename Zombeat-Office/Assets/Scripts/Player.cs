@@ -168,7 +168,6 @@ public class Player : MovingObject
     {
         Wall hitWall = component as Wall;
         hitWall.DamageWall(wallDamage);
-        animator.SetTrigger("PlayerChop");
     }
 
     private void Restart()
@@ -178,7 +177,6 @@ public class Player : MovingObject
 
     public void LoseLife(int loss)
     {
-        animator.SetTrigger("PlayerHit");
         life -= loss;
         lifeText.text = "-" + loss + " HP: " + life;
         CheckIfGameOver();

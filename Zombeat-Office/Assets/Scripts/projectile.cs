@@ -17,6 +17,10 @@ public class projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+
+        if (other.tag == "Food")
+            return;
+        else
+            Destroy(gameObject);
     }
 }
