@@ -35,9 +35,9 @@ public class BoardManagerBoss : MonoBehaviour
     {
         gridPositions.Clear();
 
-        for (int x = 1; x < columns - 1; x++)
+        for (int x = 3; x < columns - 1; x++)
         {
-            for (int y = 1; y < rows - 1; y++)
+            for (int y = 3; y < rows - 1; y++)
             {
                 gridPositions.Add(new Vector3(x, y, 0f));
             }
@@ -109,7 +109,8 @@ public class BoardManagerBoss : MonoBehaviour
         int enemyCount = 1;
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount,level);
 
-        Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
+        if(level == 0)
+            Instantiate(exit, new Vector3(7, 7, 0f), Quaternion.identity);
     }
 
 

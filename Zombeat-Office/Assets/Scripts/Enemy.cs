@@ -16,6 +16,7 @@ public class Enemy : MovingObject {
     public AudioClip enemyAttack1;
     public AudioClip enemyAttack2;
     public GameObject food;
+    public GameObject exit;
 
     private Vector2 myPosition;
     private List<Vector3> gridPositions = new List<Vector3>();
@@ -94,9 +95,9 @@ public class Enemy : MovingObject {
     {
         gridPositions.Clear();
 
-        for (int x = 2; x < 5; x++)
+        for (int x = 2; x < 7; x++)
         {
-            for (int y = 2; y < 5; y++)
+            for (int y = 2; y < 7; y++)
             {
                 gridPositions.Add(new Vector3(x, y, 0f));
             }
@@ -157,6 +158,7 @@ public class Enemy : MovingObject {
                     Vector3 randomPosition = RandomPosition();
                     Instantiate(food, randomPosition, Quaternion.identity);
                 }
+                Instantiate(exit, new Vector3(7,7, 0f), Quaternion.identity);
             }
         }
 
@@ -176,6 +178,7 @@ public class Enemy : MovingObject {
                     Vector3 randomPosition = RandomPosition();
                     Instantiate(food, randomPosition, Quaternion.identity);
                 }
+                Instantiate(exit, new Vector3(7, 7, 0f), Quaternion.identity);
             }
         }
 
@@ -196,6 +199,7 @@ public class Enemy : MovingObject {
                     Vector3 randomPosition = RandomPosition();
                     Instantiate(food, randomPosition, Quaternion.identity);
                 }
+                Instantiate(exit, new Vector3(7, 7, 0f), Quaternion.identity);
             }
         }
 
