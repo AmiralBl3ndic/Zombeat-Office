@@ -87,7 +87,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 1.5, y: 2}
   m_EdgeRadius: 0
 --- !u!95 &95166921278040210
 Animator:
@@ -128,6 +128,7 @@ MonoBehaviour:
   enemyAttack1: {fileID: 8300000, guid: 4c2332bc8245b474dad63074059bb755, type: 3}
   enemyAttack2: {fileID: 8300000, guid: f6aaac83be9e0493493aace800b76619, type: 3}
   food: {fileID: 1250475573887542, guid: b565d75d6566ac34a8c3a27a7ed83898, type: 2}
+  exit: {fileID: 1633855193440580, guid: 9222e6fe132241e4e9fedf4b95ecf151, type: 2}
 --- !u!212 &212070584257364576
 SpriteRenderer:
   m_ObjectHideFlags: 1

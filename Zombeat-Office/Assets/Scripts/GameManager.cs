@@ -61,9 +61,9 @@ public class GameManager : MonoBehaviour
 
     private void OnLevelWasLoaded(int index)
     {
-        level++;
         Debug.Log("level : " + level + " successfully loaded");
         InitGame();
+        level++;
     }
 
 
@@ -79,10 +79,8 @@ public class GameManager : MonoBehaviour
 
     void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-
-        InitGame();
         Debug.Log("level : " + level + " successfully loaded");
-        Debug.Log(scene);
+        InitGame();
         level++;
     }*/
 
@@ -93,13 +91,18 @@ public class GameManager : MonoBehaviour
 
         levelImage = GameObject.Find("LevelImage");
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
-        levelText.text = "Floor " + (level);
+
+        if(level == 0)
+            levelText.text = "Floor " + (level+1);
+        else
+            levelText.text = "Floor " + (level);
+
         levelImage.SetActive(true);
         Invoke("HideLevelImage", levelStartDelay);
 
         enemies.Clear();
 
-        if (level % 5== 0 )
+        if (level % 5 == 0)
             boardBossScripts.SetupScene(level);
         else
             boardScripts.SetupScene(level);
@@ -115,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        levelText.text = "You survived " + (level+1) + "floors";
+        levelText.text = "You survived " + (level) + "floors";
         levelImage.SetActive(true);
         enabled = false;
         rTool.Stop();
